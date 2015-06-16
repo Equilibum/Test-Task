@@ -1,0 +1,26 @@
+/* Singleton Class for WebProduction. Test Task*/
+<?php
+
+class Singleton {
+    private static $_instance = null;
+    /*Ограничиваем реализацию getInstance  и клонирование обьекта*/
+    private function __construct() {
+        //
+    }
+    protected function __clone() {
+        //
+    }
+    static public function getInstance() {
+        if(is_null(self::$_instance))
+        {
+            self::$_instance = new self();
+        }
+        return self::$_instance;
+    }
+    public function import() {
+        //
+    }
+    public function get() {
+        //
+    }
+}
